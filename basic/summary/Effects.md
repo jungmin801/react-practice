@@ -61,3 +61,23 @@ function App() {
   );
 }
 ```
+
+## Clean Up Function
+- useEffect를 실행하기 전에 특정 코드를 먼저 실행하고 싶을 때 사용한다.
+- return 안에 적힌 코드가 먼저 실행된다.
+
+```jsx
+function Hello(){
+  function byeFn(){
+    console.log('bye :(')
+  }
+
+  function hiFn(){
+    console.log('Created :)');
+    return byeFn; 
+  }
+  useEffect(hiFn, []);
+  return <h1>hello</h1>
+}
+
+```
