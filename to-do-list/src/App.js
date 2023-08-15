@@ -13,8 +13,6 @@ function App() {
     setToDos((currentArray) => [todo, ...currentArray]);
     setToDo("");
   }
-  // console.log(toDos)
-
 
   return (
     <div className="App">
